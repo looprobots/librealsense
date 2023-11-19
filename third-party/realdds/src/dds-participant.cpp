@@ -195,6 +195,13 @@ void dds_participant::init( dds_domain_id domain_id, std::string const & partici
                                                                        << domain_id );
     }
 
+    if( domain_id == -1 )
+    {
+        // Get it from settings and default to 0
+        if( ! rsutils::json::get_ex( settings, "domain", &domain_id ) )
+            domain_id = 0;
+    }
+
     _domain_listener = std::make_shared< listener_impl >( *this );
 
     // Initialize the timestr "start" time
