@@ -68,6 +68,8 @@ frame::frame( frame && r )
     *this = std::move( r );
     if( owner )
         metadata_parsers = owner->get_md_parsers();
+    if( r.metadata_parsers )
+        metadata_parsers = std::move( r.metadata_parsers );
 }
 
 frame & frame::operator=( frame && r )

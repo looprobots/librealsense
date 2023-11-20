@@ -15,7 +15,7 @@ namespace librealsense
 {
     namespace fw_logs
     {
-        fw_log_data::fw_log_data()
+        fw_log_data::fw_log_data(void)
         {
             _magic_number = 0;
             _severity = 0;
@@ -34,7 +34,7 @@ namespace librealsense
         }
 
 
-        fw_log_data::~fw_log_data()
+        fw_log_data::~fw_log_data(void)
         {
         }
 

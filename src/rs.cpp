@@ -420,6 +420,7 @@ public:
     {
         // Shouldn't get called...
         throw std::runtime_error( "calibration_change_callback::release() ?!?!?!" );
+        delete this;
     }
 };
 
