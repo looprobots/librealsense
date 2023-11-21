@@ -252,8 +252,8 @@ install(
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 #https://cmake.org/cmake/help/latest/command/install.html
-install(DIRECTORY presets/
-    DESTINATION $ENV{HOME}/Documents/librealsense2/presets
-    FILES_MATCHING PATTERN "*.preset"
-)
+#install(DIRECTORY presets/
+#    DESTINATION $ENV{HOME}/Documents/librealsense2/presets
+#    FILES_MATCHING PATTERN "*.preset"
+#)
 endif()
